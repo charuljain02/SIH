@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Login</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="role-script.js"></script>
+  <style>
+    body{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      background:#2563eb;
+      font-family:Arial, sans-serif;
+      color:white;
+    }
+    .login-container{
+      background:#1e40af;
+      padding:40px;
+      border-radius:12px;
+      width:300px;
+      text-align:center;
+    }
+    .login-container input{
+      width:100%;
+      margin:10px 0;
+      padding:10px;
+      border-radius:6px;
+      border:none;
+    }
+    .login-container button{
+      padding:10px 20px;
+      border:none;
+      border-radius:6px;
+      cursor:pointer;
+      background:#3b82f6;
+      font-weight:bold;
+      margin-top:10px;
+      width:100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Doctor Login</h2>
+    <input type="text" id="doctorUsername" placeholder="Username">
+    <input type="password" id="doctorPassword" placeholder="Password">
+    <button onclick="login('doctor')">Login</button>
+  </div>
+</body>
+</html>
