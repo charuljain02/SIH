@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Symptom Tracking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>Symptom Tracking</header>
+<nav>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="patient-details.html">Profile</a>
+  <a href="prescriptions.html">Prescriptions</a>
+  <a href="symptoms.html">Symptoms</a>
+</nav>
+
+<main class="container">
+  <form id="symptomForm">
+    <label>Fever</label>
+    <input type="checkbox" id="fever">
+    <label>Cough</label>
+    <input type="checkbox" id="cough">
+    <label>Fatigue</label>
+    <input type="checkbox" id="fatigue">
+    <label>Other</label>
+    <input type="text" id="otherSymptoms">
+    <button type="submit">Submit Symptoms</button>
+  </form>
+</main>
+
+<script>
+document.getElementById('symptomForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const symptoms=[];
+  if(document.getElementById('fever').checked) symptoms.push('Fever');
+  if(document.getElementById('cough').checked) symptoms.push('Cough');
+  if(document.getElementById('fatigue').checked) symptoms.push('Fatigue');
+  const other = document.getElementById('otherSymptoms').value.trim();
+  if(other) symptoms.push(other);
+  alert('Symptoms Recorded: '+symptoms.join(', '));
+  this.reset();
+});
+</script>
+
+<footer>&copy; 2025 Healthcare System</footer>
+</body>
+</html>
