@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Healthcare Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>Doctor / Admin Dashboard</header>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="patient-details.html">Patients</a>
+  <a href="prescriptions.html">Prescriptions</a>
+  <a href="reports.html">Reports</a>
+  <a href="hospitals.html">Hospital</a>
+</nav>
+
+<main class="container">
+  <div class="cards">
+    <div class="card"><i>🧑‍⚕️</i>Total Patients<br>1250</div>
+    <div class="card"><i>📅</i>Appointments Today<br>58</div>
+    <div class="card"><i>💊</i>Active Prescriptions<br>320</div>
+    <div class="card"><i>⚠️</i>Critical Cases<br>12</div>
+  </div>
+
+  <section>
+    <h3>Appointment Status</h3>
+    <canvas id="appointmentChart"></canvas>
+  </section>
+</main>
+
+<script>
+const ctx1 = document.getElementById('appointmentChart').getContext('2d');
+new Chart(ctx1, {
+  type:'doughnut',
+  data:{labels:['Completed','Pending','Emergency'],datasets:[{data:[45,25,8],backgroundColor:['#22c55e','#facc15','#ef4444']}]}
+});
+</script>
+
+<footer>&copy; 2025 Healthcare System</footer>
+</body>
+</html>
