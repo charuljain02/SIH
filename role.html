@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Role - Health Record</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="role-script.js"></script>
+  <style>
+    body {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      background:#2563eb;
+      color:white;
+      font-family:Arial, sans-serif;
+    }
+    .role-container {
+      background:#1e40af;
+      padding:40px;
+      border-radius:12px;
+      text-align:center;
+    }
+    .role-container h1{
+      margin-bottom:30px;
+    }
+    .role-container button{
+      margin:10px;
+      padding:15px 25px;
+      border:none;
+      border-radius:8px;
+      cursor:pointer;
+      font-size:16px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+    .role-container button:hover{
+      background:#3b82f6;
+    }
+  </style>
+</head>
+<body>
+  <div class="role-container">
+    <h1>Select Your Role</h1>
+    <button onclick="setRole('patient')">🧑‍⚕️ Patient</button>
+    <button onclick="setRole('doctor')">👩‍⚕️ Doctor</button>
+    <button onclick="setRole('company')">🏢 Company</button>
+  </div>
+</body>
+</html>
