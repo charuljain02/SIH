@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reports</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>Reports</header>
+<nav>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="patient-details.html">Profile</a>
+  <a href="prescriptions.html">Prescriptions</a>
+  <a href="reports.html">Reports</a>
+</nav>
+
+<main class="container">
+  <h3>Health Reports</h3>
+  <canvas id="reportChart"></canvas>
+</main>
+
+<script>
+const ctx = document.getElementById('reportChart').getContext('2d');
+new Chart(ctx,{type:'line',data:{labels:['Jan','Feb','Mar','Apr','May'],datasets:[{label:'Checkups',data:[50,70,65,80,90],borderColor:'#2563eb',fill:false}]},options:{responsive:true}});
+</script>
+
+<footer>&copy; 2025 Healthcare System</footer>
+</body>
+</html>
